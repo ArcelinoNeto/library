@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :reservation do
-    booking_date { "MyString" }
-    return_date { "MyString" }
-    booking_status { "MyString" }
-    book { nil }
-    user { nil }
+    booking_date { Faker::Date.forward(days: 0) }
+    return_date { Faker::Date.forward(days: 5) }
+    booking_status { "borrowed" }
+    association(:book)
+    association(:user)
   end
 end
