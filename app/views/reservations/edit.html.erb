@@ -2,5 +2,8 @@
 
 <%= render 'form', reservation: @reservation %>
 
-<%= link_to 'Show', @reservation %> |
-<%= link_to 'Back', reservations_path %>
+<br> 
+
+<%= link_to reservations_path do %>
+  <i class='bx bx-left-arrow-alt'></i>
+<% end %>

@@ -2,5 +2,8 @@
 
 <%= render 'form', book: @book %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<br> 
+
+<%= link_to books_path do %>
+  <i class='bx bx-left-arrow-alt'></i>
+<% end %>

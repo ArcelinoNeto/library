@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -30,5 +28,8 @@
   <%= @book.publishing_company %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<br> 
+
+<%= link_to books_path do %>
+  <i class='bx bx-left-arrow-alt'></i>
+<% end %>

@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Library</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,15 +13,110 @@
   </head>
 
   <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bx-library icon'></i>
+        <div class="logo_name">Library</div>
+        <i class='bx bx-menu' id="btn" ></i>
+      </div>
 
-    <div>
-      <%= link_to "Index", home_index_path %>
-      <%= link_to "Reservations", reservations_path %>
-      <%= link_to "Books", books_path %>
-      <%= link_to "Sign in", new_user_session_path %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <ul class="nav-list">
+        <li>
+          <i class='bx bx-search' ></i>
+          <input type="text" placeholder="Search...">
+          <span class="tooltip">Search</span>
+        </li>
+
+        <li>
+          <%= link_to new_user_session_path do %>
+            <i class='bx bx-home'></i>
+            <span class="links_name">Index</span>
+          <% end %>
+          <span class="tooltip">Index</span>
+        </li>
+
+        <li>
+            <%= link_to new_user_registration_path do %>
+              <i class='bx bx-user' ></i>
+            <span class="links_name">User</span>
+            <% end %>
+            <span class="tooltip">User</span>
+        </li>
+        
+        <li>
+          <%= link_to books_path  do %>
+            <i class='bx bx-book'></i>
+            <span class="links_name">Books</span>
+          <% end %>
+          <span class="tooltip">Books</span>
+        </li>
+
+        <li>
+         <%= link_to reservations_path do %>
+            <i class='bx bx-collection'></i>
+            <span class="links_name">Reservations</span>
+          <% end %>
+          <span class="tooltip">Reservations</span>
+        </li>
+        
+        <li>
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+
+        <li class="user">
+          <% if current_user %>
+
+            <div class="user-details">
+
+              <div class="name_job">
+                <div class="job"><%= current_user.email%></div>
+              </div>
+            </div>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class='bx bx-log-out' id="log_out" ></i>
+            <% end %>
+          <% end %>
+        </li>
+      </ul>
     </div>
 
-    <%= yield %>
+    <section class="home-section">
+      <div class="text">
+        <% if notice %>
+          <p id="notice"><%= notice %></p>
+        <% end %>
+        
+        <%= yield %>
+      </div>
+    </section>
+    
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+      if(sidebar.classList.contains("open")){
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+      }else {
+        closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+      }
+      }
+    </script>
   </body>
 </html>
