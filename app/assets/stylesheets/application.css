@@ -25,14 +25,19 @@
 }
 
 h1{
-  height: 60px;
+  height: 80px;
   font-size: 50px;
   padding: 15px 0;
 }
 
+table{
+  width: 90%;
+}
+
 th{
-  height: 25px;
+  height: 50px;
   font-size: 20px;
+  text-align: left;
 }
 
 .sidebar{
@@ -315,6 +320,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #008000;
+  margin-left: 10px;
 }
 
 .bx-plus:hover{

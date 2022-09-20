@@ -28,7 +28,7 @@
         </li>
 
         <li>
-          <%= link_to new_user_session_path do %>
+          <%= link_to home_index_path do %>
             <i class='bx bx-home'></i>
             <span class="links_name">Index</span>
           <% end %>
@@ -36,7 +36,7 @@
         </li>
 
         <li>
-            <%= link_to new_user_registration_path do %>
+            <%= link_to users_path do %>
               <i class='bx bx-user' ></i>
             <span class="links_name">User</span>
             <% end %>
@@ -57,14 +57,6 @@
             <span class="links_name">Reservations</span>
           <% end %>
           <span class="tooltip">Reservations</span>
-        </li>
-        
-        <li>
-          <a href="#">
-            <i class='bx bx-cog' ></i>
-            <span class="links_name">Setting</span>
-          </a>
-          <span class="tooltip">Setting</span>
         </li>
 
         <li class="user">

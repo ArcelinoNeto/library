@@ -11,9 +11,9 @@ namespace :dev do
     puts "Cadastrando Usuário Admin"
     
     User.create!(
-      # name: Faker::Internet.username
+      name: "Admin",
       email: "admin@admin.com",
-      # permission: 0
+      role: 0,
       password: "123456",
       password_confirmation: "123456"
     )
@@ -26,9 +26,9 @@ namespace :dev do
     5.times do |i|
       password = Faker::Internet.password(min_length: 8)
       User.create!(
-        # name: Faker::Internet.username
+        name: Faker::Name.name,
         email: Faker::Internet.email,
-        # permission: 1
+        role: 1,
         password: password,
         password_confirmation: password
       )
@@ -57,7 +57,7 @@ namespace :dev do
       Reservation.create!(
         booking_date: Faker::Date.forward(days: 0),
         return_date: Faker::Date.forward(days: 5),
-        booking_status: "borrowed",
+        booking_status: [0,1,2].sample,
         book: Book.all.sample,
         user: User.all.sample
       )

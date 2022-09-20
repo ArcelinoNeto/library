@@ -4,11 +4,12 @@
   <thead>
     <tr>
       <th></th>
+      <th></th>
+      <th>Book</th>
+      <th>User</th>
       <th>Booking date</th>
       <th>Return date</th>
       <th>Booking status</th>
-      <th>Book</th>
-      <th>User</th>
       <th colspan="2">
         <%= link_to new_reservation_path do %>
           <i class='bx bx-plus' ></i>
@@ -19,17 +20,19 @@
 
   <tbody>
     <% @reservations.each do |reservation| %>
+    
       <tr>
         <td>
           <%= link_to reservation do %>
             <i class='bx bx-show'></i>
           <% end %>
         </td>
+        <td><%= reservation.id %></td>
+        <td><%= reservation.book_id %> Titulo do Livro</td>
+        <td><%= reservation.user_id %> Nome do Usuário</td>
         <td><%= reservation.booking_date %></td>
         <td><%= reservation.return_date %></td>
         <td><%= reservation.booking_status %></td>
-        <td><%= reservation.book_id %></td>
-        <td><%= reservation.user_id %></td>
         <td>
           <%= link_to edit_reservation_path(reservation) do %>
             <i class='bx bx-edit'></i>

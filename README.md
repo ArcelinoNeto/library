@@ -2,8 +2,8 @@
 This project is the result of a challenge proposed by the company Levante.
 The project proposal is the creation of an application for the management of a "Library".
 
-# Projeto
-O projeto foi construído seguindo as regras definidas pelo pessoal da [Levante](https://gist.github.com/caioagiani/66b26f85ab6db506fecb9a90a04389f7).
+# Project
+The project was built following the rules defined by the staff of [Levante](https://gist.github.com/caioagiani/66b26f85ab6db506fecb9a90a04389f7).
 
 
 # Technology stack
