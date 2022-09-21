@@ -63,6 +63,19 @@ form{
     border-bottom-width: 2px;
 }
 
+.field select{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#CACACA;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.field select:focus{
+    border-bottom-width: 2px;
+}
+
 .eye-icon{
     position: absolute;
     top: 50%;
