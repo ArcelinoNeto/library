@@ -67,15 +67,12 @@
         <li class="user">
           <% if current_user %>
             <div class="user-details">
-              <div class="name_job">
-                <div class="job"><%= current_user.name%></div>
-              </div>
-              <br>
-
-              <div class="email_job">
-                <div class="job"><%= current_user.email%></div>
+              <div class="name_email">
+                <div class="name"><%= current_user.name%></div>
+                <div class="email"><%= current_user.email%></div>
               </div>
             </div>
+
             <%= link_to destroy_user_session_path, method: :delete do %>
               <i class='bx bx-log-out' id="log_out" ></i>
             <% end %>

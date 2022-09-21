@@ -260,14 +260,14 @@ th{
 }
 
 .sidebar li.user .name,
-.sidebar li.user .job{
+.sidebar li.user .email{
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   white-space: nowrap;
 }
 
-.sidebar li.user .job{
+.sidebar li.user .email{
   font-size: 12px;
 }
 
