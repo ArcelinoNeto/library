@@ -25,9 +25,15 @@
 }
 
 h1{
-  height: 80px;
+  height: 60px;
   font-size: calc(100% + 25px);
   padding: 15px 0;
+}
+
+p{
+  margin: 50px;
+  width: 90%;
+  text-align: justify;
 }
 
 table{

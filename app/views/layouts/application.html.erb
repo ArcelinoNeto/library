@@ -21,48 +21,47 @@
       </div>
 
       <ul class="nav-list">
-        <li>
-          <i class='bx bx-search' ></i>
-          <input type="text" placeholder="Search...">
-          <span class="tooltip">Search</span>
-        </li>
-
-        <li>
-          <%= link_to home_index_path do %>
-            <i class='bx bx-home'></i>
-            <span class="links_name">Index</span>
-          <% end %>
-          <span class="tooltip">Index</span>
-        </li>
-
-        
         <% if current_user %>
-            <% if current_user.role == "librarian" %>
-            <li>
-              <%= link_to users_path do %>
-                <i class='bx bx-user' ></i>
-                <span class="links_name">User</span>
-              <% end %>
-              <span class="tooltip">User</span>
+          <li>
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span>
           </li>
-          <% end %>
-        <% end %>
-        
-        <li>
-          <%= link_to books_path  do %>
-            <i class='bx bx-book'></i>
-            <span class="links_name">Books</span>
-          <% end %>
-          <span class="tooltip">Books</span>
-        </li>
 
-        <li>
-         <%= link_to reservations_path do %>
-            <i class='bx bx-collection'></i>
-            <span class="links_name">Reservations</span>
+          <li>
+            <%= link_to home_index_path do %>
+              <i class='bx bx-home'></i>
+              <span class="links_name">Index</span>
+            <% end %>
+            <span class="tooltip">Index</span>
+          </li>
+
+          <% if current_user.role == "librarian" %>
+              <li>
+                <%= link_to users_path do %>
+                  <i class='bx bx-user' ></i>
+                  <span class="links_name">User</span>
+                <% end %>
+                <span class="tooltip">User</span>
+            </li>
           <% end %>
-          <span class="tooltip">Reservations</span>
-        </li>
+
+          <li>
+            <%= link_to books_path  do %>
+              <i class='bx bx-book'></i>
+              <span class="links_name">Books</span>
+            <% end %>
+            <span class="tooltip">Books</span>
+          </li>
+
+          <li>
+          <%= link_to reservations_path do %>
+              <i class='bx bx-collection'></i>
+              <span class="links_name">Reservations</span>
+            <% end %>
+            <span class="tooltip">Reservations</span>
+          </li>
+        <% end %>
 
         <li class="user">
           <% if current_user %>
@@ -75,6 +74,11 @@
 
             <%= link_to destroy_user_session_path, method: :delete do %>
               <i class='bx bx-log-out' id="log_out" ></i>
+            <% end %>
+          
+            <% else %>
+            <%= link_to new_user_session_path do %>
+              <i class='bx bx-log-in' id="log_out"></i>
             <% end %>
           <% end %>
         </li>
