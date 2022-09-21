@@ -11,6 +11,10 @@
         <div class="field input-field">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "email", placeholder: "Email", class: "input" %>
         </div>
+
+        <div class="field select-field">
+          <%= f.select :role, options_for_select(User.roles.map {|key, value| [key.titleize, User.roles.key(value)]}, User.roles) %>
+        </div>
         
         <div class="field input-field">
           <%= f.password_field :password, autocomplete: "new-password", type: "password", placeholder:"Create password", class: "password" %>
