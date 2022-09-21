@@ -24,6 +24,13 @@
         <div class="field button-field">
           <button>Signup</button>
         </div>
+
+        <%= link_to users_path, data: { confirm: 'Do you really want to cancel this registration?' } do %>
+          <div class="field button-field">
+            <button>Cancelar</button>
+          </div>
+        <% end %>
+
       <% end %>
     </div>
   </div>

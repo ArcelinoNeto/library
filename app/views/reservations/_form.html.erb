@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :book_id %>
-    <%= form.text_field :book_id %>
+    <%= form.collection_select :book_id, Book.select("id, title"), :id, :title, {prompt: "Select Book"} %>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.collection_select :user_id, User.select("id, name"), :id, :name, {prompt: "Select User"} %>
   </div>
 
   <div class="field">
@@ -31,9 +31,9 @@
     <%= form.text_field :return_date %>
   </div>
 
-  <div class="field">
+  <div class="field select">
     <%= form.label :booking_status %>
-    <%= form.text_field :booking_status %>
+    <%= form.select :booking_status, options_for_select(Reservation.booking_statuses.map {|key, value| [key.titleize, Reservation.booking_statuses.key(value)]}, Reservation.booking_statuses) %>
   </div>
 
   <div class="actions">

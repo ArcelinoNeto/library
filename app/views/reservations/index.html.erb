@@ -28,8 +28,8 @@
           <% end %>
         </td>
         <td><%= reservation.id %></td>
-        <td><%= reservation.book_id %> Titulo do Livro</td>
-        <td><%= reservation.user_id %> Nome do Usuário</td>
+        <td><%= reservation.book.title %></td>
+        <td><%= reservation.user.name %></td>
         <td><%= reservation.booking_date %></td>
         <td><%= reservation.return_date %></td>
         <td><%= reservation.booking_status %></td>
@@ -39,7 +39,7 @@
           <% end %>
         </td>
         <td>
-          <%= link_to reservation, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= link_to reservation, method: :delete, data: { confirm: 'Do you really want to delete this reservation?' } do %>
             <i class='bx bx-x'></i>
           <% end %>
         </td>
