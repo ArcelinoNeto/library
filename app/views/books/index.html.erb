@@ -12,8 +12,10 @@
       <th>Puclication date</th>
       <th>Publishing company</th>
       <th colspan="2">
-        <%= link_to new_book_path do %>
+        <% if current_user.role == "librarian" %>
+          <%= link_to new_book_path do %>
           <i class='bx bx-plus' ></i>
+        <% end %>
         <% end %>
       </th>
     </tr>
@@ -35,13 +37,17 @@
         <td><%= book.puclication_date %></td>
         <td><%= book.publishing_company %></td>
         <td>
-          <%= link_to edit_book_path(book) do %>
-            <i class="bx bx-edit" ></i>
+          <% if current_user.role == "librarian" %>
+            <%= link_to edit_book_path(book) do %>
+              <i class="bx bx-edit" ></i>
+            <% end %>
           <% end %>
         </td>
         <td>
-          <%= link_to book, method: :delete, data: { confirm: 'Do you really want to delete this book?' } do %>
-            <i class='bx bx-x'></i>
+          <% if current_user.role == "librarian" %>
+            <%= link_to book, method: :delete, data: { confirm: 'Do you really want to delete this book?' } do %>
+              <i class='bx bx-x'></i>
+            <% end %>
           <% end %>
         </td>
       </tr>

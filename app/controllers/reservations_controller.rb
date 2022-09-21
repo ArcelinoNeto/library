@@ -4,7 +4,11 @@ class ReservationsController < ApplicationController
 
   # GET /reservations or /reservations.json
   def index
-    @reservations = ReservationSearch.new(params).results
+    if current_user.role == "librarian"
+      @reservations = ReservationSearch.new(params).results
+    end
+    
+      @reservations = ReservationSearch.new(params).results
   end
 
   # GET /reservations/1 or /reservations/1.json
