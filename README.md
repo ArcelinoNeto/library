@@ -6,7 +6,7 @@ The project proposal is the creation of an application for the management of a "
 The project was built following the rules defined by the staff of [Levante](https://gist.github.com/caioagiani/66b26f85ab6db506fecb9a90a04389f7).
 
 Preview of the project in progress:
-![library](https://www.loom.com/share/4cac3add18424129b83c6b8b46d6299e)
+Click [here](https://www.loom.com/share/4cac3add18424129b83c6b8b46d6299e)
 
 # Technology stack
 This is application using 
