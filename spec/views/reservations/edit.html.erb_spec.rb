@@ -5,9 +5,9 @@ RSpec.describe "reservations/edit", type: :view do
     @reservation = assign(:reservation, Reservation.create!(
       booking_date: "MyString",
       return_date: "MyString",
-      booking_status: "MyString",
-      book: nil,
-      user: nil
+      booking_status: [0,1,2].sample,
+      book: '1',
+      user: '1'
     ))
   end
 
