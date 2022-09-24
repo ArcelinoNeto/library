@@ -2,13 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "reservations/show", type: :view do
   before(:each) do
-    @reservation = assign(:reservation, Reservation.create!(
-      booking_date: "Booking Date",
-      return_date: "Return Date",
-      booking_status: "Booking Status",
-      book: nil,
-      user: nil
-    ))
+    # @reservation = FactoryBot.create(:reservation)
   end
 
   it "renders attributes in <p>" do
@@ -16,7 +10,10 @@ RSpec.describe "reservations/show", type: :view do
     expect(rendered).to match(/Booking Date/)
     expect(rendered).to match(/Return Date/)
     expect(rendered).to match(/Booking Status/)
+    expect(rendered).to match(/book/)
     expect(rendered).to match(//)
-    expect(rendered).to match(//)
+    
+    binding.pry
+    
   end
 end
