@@ -2,30 +2,15 @@ require 'rails_helper'
 
 RSpec.describe "users/index.html.erb", type: :view do
   before(:each) do
-    assign(:users, [
-      # Reservation.create!(
-      #   email: "Booking Date",
-      #   return_date: "Return Date",
-      #   booking_status: "Booking Status",
-      #   book: nil,
-      #   user: nil
-      # ),
-      # Reservation.create!(
-      #   booking_date: "Booking Date",
-      #   return_date: "Return Date",
-      #   booking_status: "Booking Status",
-      #   book: nil,
-      #   user: nil
-      # )
-    ])
+    @users = FactoryBot.create_list(:user, 2)
   end
 
-  it "renders a list of reservations" do
+  it "renders a list of users" do
     render
-    # assert_select "tr>td", text: "Booking Date".to_s, count: 2
-    # assert_select "tr>td", text: "Return Date".to_s, count: 2
-    # assert_select "tr>td", text: "Booking Status".to_s, count: 2
-    # assert_select "tr>td", text: nil.to_s, count: 2
-    # assert_select "tr>td", text: nil.to_s, count: 2
+    # assert_select "tr>td", text: "Name".to_s, count: 2
+    # assert_select "tr>td", text: "email".to_s, count: 2
+    assert_select "tr>td", text: "restricted_user".to_s, count: 2
+    # assert_select "tr>td", text: "Password".to_s, count: 2
+    # assert_select "tr>td", text: "Password".to_s, count: 2
   end
 end
