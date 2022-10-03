@@ -4,7 +4,9 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
-    @books = BookSearch.new(params).results
+    # @books = BookSearch.new(params).results
+    @search = BookSearch.new(search_params)
+    @books = @search.results
   end
 
   # GET /books/1 or /books/1.json
@@ -56,6 +58,12 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url, notice: "Book was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  protected
+
+  def search_params
+    params.delete(:search) || {}
   end
 
   private

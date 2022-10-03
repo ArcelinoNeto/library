@@ -1,15 +1,76 @@
-<table>
-  <tbody>
-    <tr>
-      <td style="text-align: center; font-size: 15px" colspan="6">Filters:</td>
-    </tr>
-    <tr>
-      <td>Id:</td>
-      <td>Title:</td>
-      <td>Category:</td>
-      <td>Author:</td>
-      <td>Date:</td>
-      <td>Company:</td>
-    </tr>
-  </tbody>
-</table>
+<%#= form_for(@search, url: "/searchs/book_search") do |form| %>
+<%= form_for(@search, url: books_path) do |form| %>
+ 
+  <table cellpadding="0" cellspacing="0"  class="filter">
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-size: 15px" colspan="6">Filters:</td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :id %>
+        </td>
+        <td style="text-align: center" colspan="2" >
+          <%= form.label :created_at %>
+        </td>
+         <td style="text-align: center" colspan="2" >
+          <%= form.label :puclication_date %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.text_field :id, class: "form-control" %>
+        </td>
+        <td>
+          <%= form.search_field :created_at_above %>
+        </td>
+        <td>
+          <%= form.search_field :created_less %>
+        </td>
+        <td>
+          <%= form.search_field :puclication_date_above, class: "form-control" %>
+        </td>
+        <td>
+          <%= form.search_field :puclication_date_less, class: "form-control" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= form.label :title %>
+        </td>
+        <td>
+          <%= form.label :catgegory %>
+        </td>
+        <td>
+          <%= form.label :author %>
+        </td>
+        <td colspan="2">
+          <%= form.label :company %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= form.search_field :title, class: "form-control" %>
+        </td>
+        <td>
+          <%= form.search_field :category, class: "form-control" %>
+        </td>
+        <td>
+          <%= form.search_field :author, class: "form-control" %>
+        </td>
+        <td>
+          <%= form.search_field :publishing_company %>
+        </td>
+        <td style="text-align: center">
+          <%= form.submit "Search", class: 'btn btn-secondary' %>
+          <%= link_to form.submit  do %>
+          
+            <i class='bx bx-search' ></i>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

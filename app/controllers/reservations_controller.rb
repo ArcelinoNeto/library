@@ -7,7 +7,6 @@ class ReservationsController < ApplicationController
     if current_user.role == "librarian"
       @reservations = ReservationSearch.new(params).results
     end
-    
       @reservations = ReservationSearch.new(params).results
   end
 
