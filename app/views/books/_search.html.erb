@@ -1,69 +1,44 @@
 <%= form_for(@search, url: books_path, method: :get)  do |form| %>
-<%# <%= form_with url: books_path, method: :get do |form| %> %>
-  <table cellpadding="0" cellspacing="0"  class="filter">
+
+  <table cellpadding="0" cellspacing="0">
     <tbody>
       <tr>
-        <td style="text-align: center; font-size: 15px" colspan="6">Filters:</td>
+        <td colspan="6" class="filter-title">Filters:</td>
       </tr>
       <tr>
         <td>
-          <%= form.label :id %>
+          <%= form.text_field :id, autocomplete: "id", type: "id", placeholder: "Id", class: "filter" %>
         </td>
-        <td style="text-align: center" colspan="2" >
-          <%= form.label :created_at %>
+        <td>
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "created_above", placeholder: "Created Above", class: "filter" %>
         </td>
-         <td style="text-align: center" colspan="2" >
-          <%= form.label :publication_date %>
+        <td>
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "created_less", placeholder: "Created Less", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "publication_date_above", placeholder: "Publication_date Above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "publication_date_less", placeholder: "Publication_date Less", class: "filter" %>
         </td>
       </tr>
       <tr>
         <td>
-          <%= form.text_field :id, class: "form-control" %>
+          <%= form.text_field :title, autocomplete: "title", type: "title", placeholder: "Title", class: "filter" %>
         </td>
         <td>
-          <%= form.search_field :created_at_above %>
+          <%= form.text_field :category, autocomplete: "category", type: "category", placeholder: "Category", class: "filter" %>
         </td>
         <td>
-          <%= form.search_field :created_less %>
+          <%= form.text_field :author, autocomplete: "author", type: "author", placeholder: "Author", class: "filter" %>
         </td>
         <td>
-          <%= form.search_field :publication_date_above, class: "form-control" %>
-        </td>
-        <td>
-          <%= form.search_field :publication_date_less, class: "form-control" %>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <%= form.label :title %>
-        </td>
-        <td>
-          <%= form.label :category %>
-        </td>
-        <td>
-          <%= form.label :author %>
-        </td>
-        <td colspan="2">
-          <%= form.label :company %>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <%= form.search_field :title, class: "form-control" %>
-        </td>
-        <td>
-          <%= form.search_field :category, class: "form-control" %>
-        </td>
-        <td>
-          <%= form.search_field :author, class: "form-control" %>
-        </td>
-        <td>
-          <%= form.search_field :publishing_company %>
+          <%= form.text_field :publishing_company, autocomplete: "publishing_company", type: "publishing_company", placeholder: "Publishing Company", class: "filter" %>
         </td>
         <td style="text-align: center">
-          <%= form.submit "Search" %>
+          <button class="button-search">
+            <i class='bx bx-search' ></i> Search
+          </button>         
         </td>
       </tr>
     </tbody>

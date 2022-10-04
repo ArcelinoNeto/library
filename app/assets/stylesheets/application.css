@@ -328,6 +328,8 @@ th{
   color: #fff;
   background: #008000;
   margin-left: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .bx-plus:hover{
@@ -343,6 +345,8 @@ th{
   border-radius: 6px;
   color: #808080	;
   background: #E4E9F7;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .bx-show:hover{
@@ -357,9 +361,9 @@ th{
   font-weight: 400;
   border-radius: 6px;
   color: #fff;
-  border: solid;
-  border-width: 1px;
   background: #010497;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .bx-edit:hover{
@@ -374,15 +378,13 @@ th{
   font-weight: 400;
   border-radius: 6px;
   color: #fff;
-  border: solid;
-  border-width: 1px;
   background: #FF0000;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .bx-x:hover{
   color: #FF0000;
-  border: solid;
-  border-width: 1px;
   background: #fff;
   border-radius: 5px;
 }
@@ -390,6 +392,73 @@ th{
 .field{
   width: 50%;
   min-width: 225px;
+  height: 50px;
+}
+
+.button-return{
+  border: none;
+  height: 25px;
+  width: 15%;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #fff;
+  background: #5e8bb8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-return:hover{
+  color: #5e8bb8;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.button-submit{
+  border: none;
+  height: 25px;
+  width: 15%;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #fff;
+  background: #008000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-submit:hover{
+  color: #008000;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.filter-title{
+  font-size: 12px;
+  color: #5e8bb8;
+}
+.filter{
+  border-radius: 5px;
+  border: solid 1px #5e8bb8 ;
+}
+
+.button-search{
+  border: none;
+  height: 25px;
+  width: 50%;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #fff;
+  background: #5e8bb8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-search:hover{
+  color: #5e8bb8;
+  background: #fff;
+  border-radius: 6px;
 }
 
 @media (max-width: 420px) {

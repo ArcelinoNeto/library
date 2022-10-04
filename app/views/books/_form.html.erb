@@ -12,41 +12,39 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, autofocus: true, autocomplete: "title", type: "title", placeholder: "Title", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_field :description, autocomplete: "description", type: "description", placeholder: "Description", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.text_field :category, autocomplete: "category", type: "category", placeholder: "Category", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, autocomplete: "author", type: "author", placeholder: "Author", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :publication_date %>
-    <%= form.text_field :publication_date %>
+    <%= form.text_field :publication_date, autocomplete: "publication_date", type: "publication_date", placeholder: "Publication Date", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :publishing_company %>
-    <%= form.text_field :publishing_company %>
+    <%= form.text_field :publishing_company, autocomplete: "publishing_company", type: "publishing_company", placeholder: "Publishing Company", class: "input"  %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit">
+    <%= link_to books_path do %>
+      <button class="button-return">
+        Return
+      </button>
+    <% end %>
+  
+    <button class="button-submit">
+      Save
+    </button> 
   </div>
-
-  <%= link_to books_path do %>
-    <i class='bx bx-left-arrow-alt'></i>
-  <% end %>
   
 <% end %>

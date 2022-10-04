@@ -7,6 +7,10 @@ class BookSearch < Searchlight::Search
     Book.all.order(:id)
   end
 
+  def search_base_order_title
+    Book.all.order(title: :asc)
+  end
+
   def search_id
     query.where(id: options[:id])
   end
@@ -43,8 +47,8 @@ class BookSearch < Searchlight::Search
     query.where('publishing_company ILIKE ?', "%#{entry_publishing_company}%" )
   end
 
-  def search_created_at_above
-    entry_date = options[:created_at_above]
+  def search_created_above
+    entry_date = options[:created_above]
     converted_date = entry_date.to_date
     query.where('created_at >= ?', "%#{converted_date}%")
   end

@@ -5,7 +5,5 @@ class UserSearch < Searchlight::Search
 
   def base_query
     User.all.order(:id)
-  end
-
-  
+  end  
 end

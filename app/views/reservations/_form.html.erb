@@ -12,31 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :book_id %>
     <%= form.collection_select :book_id, Book.select("id, title"), :id, :title, {prompt: "Select Book"} %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
     <%= form.collection_select :user_id, User.select("id, name"), :id, :name, {prompt: "Select User"} %>
   </div>
 
   <div class="field">
-    <%= form.label :booking_date %>
-    <%= form.text_field :booking_date %>
+    <%= form.text_field :booking_date, autocomplete: "booking_date", type: "booking_date", placeholder: "Booking Date", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.label :return_date %>
-    <%= form.text_field :return_date %>
+    <%= form.text_field :return_date, autocomplete: "return_date", type: "return_date", placeholder: "Return Date", class: "input"  %>
   </div>
 
   <div class="field select">
-    <%= form.label :booking_status %>
-    <%= form.select :booking_status, options_for_select(Reservation.booking_statuses.map {|key, value| [key.titleize, Reservation.booking_statuses.key(value)]}, Reservation.booking_statuses) %>
+    <%= form.select :booking_status, options_for_select(Reservation.booking_statuses.map {|key, value| [key.titleize, Reservation.booking_statuses.key(value)]}, Reservation.booking_statuses), {prompt: "Select Status"} %>
   </div>
 
-  <div class="actions">
+  <div class="submit">
     <%= form.submit %>
   </div>
 <% end %>
