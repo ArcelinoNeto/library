@@ -21,7 +21,7 @@ RSpec.describe "/books", type: :request do
     description: 'description',
     category: 'category',
     author: 'author',
-    puclication_date: 'puclication_date',
+    publication_date: 'publication_date',
     publishing_company: 'publishing_company'
     }
   }
@@ -32,7 +32,7 @@ RSpec.describe "/books", type: :request do
     description: 'description',
     category: 'category',
     author: 'author',
-    puclication_date: 'puclication_date',
+    publication_date: 'publication_date',
     publishing_company: 'publishing_company'
     }
   }

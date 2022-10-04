@@ -7,7 +7,7 @@ RSpec.describe "books/new", type: :view do
       description: "MyString",
       category: "MyString",
       author: "MyString",
-      puclication_date: "MyString",
+      publication_date: "MyString",
       publishing_company: "MyString"
     ))
   end
@@ -25,7 +25,7 @@ RSpec.describe "books/new", type: :view do
 
       assert_select "input[name=?]", "book[author]"
 
-      assert_select "input[name=?]", "book[puclication_date]"
+      assert_select "input[name=?]", "book[publication_date]"
 
       assert_select "input[name=?]", "book[publishing_company]"
     end

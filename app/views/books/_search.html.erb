@@ -1,6 +1,5 @@
-<%#= form_for(@search, url: "/searchs/book_search") do |form| %>
-<%= form_for(@search, url: books_path) do |form| %>
- 
+<%= form_for(@search, url: books_path, method: :get)  do |form| %>
+<%# <%= form_with url: books_path, method: :get do |form| %> %>
   <table cellpadding="0" cellspacing="0"  class="filter">
     <tbody>
       <tr>
@@ -14,7 +13,7 @@
           <%= form.label :created_at %>
         </td>
          <td style="text-align: center" colspan="2" >
-          <%= form.label :puclication_date %>
+          <%= form.label :publication_date %>
         </td>
       </tr>
       <tr>
@@ -28,10 +27,10 @@
           <%= form.search_field :created_less %>
         </td>
         <td>
-          <%= form.search_field :puclication_date_above, class: "form-control" %>
+          <%= form.search_field :publication_date_above, class: "form-control" %>
         </td>
         <td>
-          <%= form.search_field :puclication_date_less, class: "form-control" %>
+          <%= form.search_field :publication_date_less, class: "form-control" %>
         </td>
       </tr>
 
@@ -40,7 +39,7 @@
           <%= form.label :title %>
         </td>
         <td>
-          <%= form.label :catgegory %>
+          <%= form.label :category %>
         </td>
         <td>
           <%= form.label :author %>
@@ -64,11 +63,7 @@
           <%= form.search_field :publishing_company %>
         </td>
         <td style="text-align: center">
-          <%= form.submit "Search", class: 'btn btn-secondary' %>
-          <%= link_to form.submit  do %>
-          
-            <i class='bx bx-search' ></i>
-          <% end %>
+          <%= form.submit "Search" %>
         </td>
       </tr>
     </tbody>

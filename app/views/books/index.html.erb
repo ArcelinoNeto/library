@@ -11,7 +11,7 @@
       <th>Description</th>
       <th>Category</th>
       <th>Author</th>
-      <th>Puclication date</th>
+      <th>Publication date</th>
       <th>Publishing company</th>
       <th colspan="2">
         <% if current_user.role == "librarian" %>
@@ -36,7 +36,7 @@
         <td><%= book.description %></td>
         <td><%= book.category %></td>
         <td><%= book.author %></td>
-        <td><%= book.puclication_date %></td>
+        <td><%= book.publication_date %></td>
         <td><%= book.publishing_company %></td>
         <td>
           <% if current_user.role == "librarian" %>

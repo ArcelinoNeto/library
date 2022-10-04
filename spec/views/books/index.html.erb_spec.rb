@@ -8,7 +8,7 @@ RSpec.describe "books/index", type: :view do
         description: "Description",
         category: "Category",
         author: "Author",
-        puclication_date: "Puclication Date",
+        publication_date: "Puclication Date",
         publishing_company: "Publishing Company"
       ),
       Book.create!(
@@ -16,7 +16,7 @@ RSpec.describe "books/index", type: :view do
         description: "Description",
         category: "Category",
         author: "Author",
-        puclication_date: "Puclication Date",
+        publication_date: "Puclication Date",
         publishing_company: "Publishing Company"
       )
     ])

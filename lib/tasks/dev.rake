@@ -44,7 +44,7 @@ namespace :dev do
         description: Faker::Marketing.buzzwords,
         category: Faker::Book.genre,
         author: Faker::Book.author,
-        puclication_date: Faker::Date.birthday(min_age: 1, max_age: 65), 
+        publication_date: Faker::Date.birthday(min_age: 1, max_age: 65), 
         publishing_company: Faker::Book.publisher
       )
     end

@@ -7,7 +7,7 @@ RSpec.describe "books/show", type: :view do
       description: "Description",
       category: "Category",
       author: "Author",
-      puclication_date: "Puclication Date",
+      publication_date: "Puclication Date",
       publishing_company: "Publishing Company"
     ))
   end
