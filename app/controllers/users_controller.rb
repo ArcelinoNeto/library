@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   def index
-    @users = User.all
+    @search = UserSearch.new(search_params)
+    @users = @search.results
   end
 
  def new
@@ -45,6 +46,12 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  protected
+
+  def search_params
+    (params.delete(:user_search) || {})
   end
 
   private

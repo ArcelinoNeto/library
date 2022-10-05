@@ -59,6 +59,6 @@ class ReservationSearch < Searchlight::Search
 
   def search_booking_status
     entry_booking_status = options[:booking_status]
-    query.where('booking_status ILIKE ?', "%#{entry_booking_status}%" )
+    query.where('booking_status == ?', "%#{entry_booking_status}%" )
   end
 end

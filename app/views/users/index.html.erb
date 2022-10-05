@@ -1,5 +1,7 @@
 <h1><%= controller_name.titleize %></h1>
 
+<%= render partial: 'users/shared/search' %>
+
 <table style= "width: 50%">
   <thead>
     <tr>
@@ -7,6 +9,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
+      <th>Created_at</th>
       <th>
         <%= link_to new_user_path do %>
           <i class='bx bx-plus' ></i>
@@ -22,6 +25,7 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
+        <td><%= user.created_at.to_s(:short) %></td>
         <td>
           <%= link_to edit_user_path(user) do %>
             <i class="bx bx-edit" ></i>

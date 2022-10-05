@@ -7,7 +7,7 @@ class BookSearch < Searchlight::Search
     Book.all.order(:id)
   end
 
-  def search_base_order_title
+  def search_order_title
     Book.all.order(title: :asc)
   end
 

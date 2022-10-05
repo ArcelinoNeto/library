@@ -1,0 +1,28 @@
+<%= form_for(@search, url: users_path, method: :get)  do |form| %>
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="filter-title">Filters:</td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :name, autocomplete: "name", type: "text", placeholder: "Name", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
+        </td>
+        <td style="text-align: center">
+          <button class="button-search">
+            <i class='bx bx-search' ></i> Search
+          </button>   
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
