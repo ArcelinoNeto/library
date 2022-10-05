@@ -20,11 +20,11 @@
   </div>
 
   <div class="field">
-    <%= form.text_field :booking_date, autocomplete: "booking_date", type: "booking_date", placeholder: "Booking Date", class: "input"  %>
+    <%= form.text_field :booking_date, autocomplete: "booking_date", type: "date", placeholder: "Booking Date", class: "input"  %>
   </div>
 
   <div class="field">
-    <%= form.text_field :return_date, autocomplete: "return_date", type: "return_date", placeholder: "Return Date", class: "input"  %>
+    <%= form.text_field :return_date, autocomplete: "return_date", type: "date", placeholder: "Return Date", class: "input"  %>
   </div>
 
   <div class="field select">
@@ -32,7 +32,7 @@
   </div>
 
   <div class="submit">
-    <%= link_to books_path do %>
+    <%= link_to reservations_path do %>
       <button class="button-return">
         Return
       </button>
