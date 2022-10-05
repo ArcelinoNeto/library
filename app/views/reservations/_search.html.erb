@@ -1,0 +1,51 @@
+<%= form_for(@search, url: reservations_path, method: :get)  do |form| %>
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="filter-title">Filters:</td>
+        <td class="filter-title" colspan="2">Booking Date:</td>
+        <td class="filter-title" colspan="2">Return Date:</td>
+        <td class="filter-title" colspan="2">Created At:</td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :booking_date_above, autocomplete: "booking_date_above", type: "date", placeholder: "booking_date_above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :booking_date_less, autocomplete: "booking_date_less", type: "date", placeholder: "booking_date_less", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :return_date_above, autocomplete: "return_date_above", type: "date", placeholder: "return_date_above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :return_date_less, autocomplete: "return_date_less", type: "date", placeholder: "return_date_less", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.text_field :book_title, autocomplete: "book_title", type: "text", placeholder: "Book Title", class: "filter" %>
+        </td>
+        <td colspan="2">
+          <%= form.text_field :user_name, autocomplete: "user_name", type: "text", placeholder: "User Name", class: "filter" %>
+        </td>
+        <td colspan="3">
+          <%#= form.text_field :booking_status, autocomplete: "booking_status", type: "select", placeholder: "booking_status", class: "filter" %>
+        </td>
+        <td style="text-align: center">
+          <button class="button-search">
+            <i class='bx bx-search' ></i> Search
+          </button>   
+        </td>     
+      </tr>
+    </tbody>
+  </table>
+<% end %>

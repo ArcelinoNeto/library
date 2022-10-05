@@ -437,15 +437,17 @@ th{
   font-size: 12px;
   color: #5e8bb8;
 }
+
 .filter{
   border-radius: 5px;
   border: solid 1px #5e8bb8 ;
+  padding: 5px;
 }
 
 .button-search{
   border: none;
   height: 25px;
-  width: 50%;
+  width: 130px;
   font-size: 15px;
   font-weight: 400;
   border-radius: 6px;
@@ -465,4 +467,17 @@ th{
   .sidebar li .tooltip{
     display: none;
   }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

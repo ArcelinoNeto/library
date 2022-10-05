@@ -1,30 +1,31 @@
 <%= form_for(@search, url: books_path, method: :get)  do |form| %>
-
   <table cellpadding="0" cellspacing="0">
     <tbody>
       <tr>
-        <td colspan="6" class="filter-title">Filters:</td>
+        <td class="filter-title">Filters:</td>
+        <td class="filter-title" colspan="2">Created At:</td>
+        <td class="filter-title" colspan="2">Publication Date:</td>
       </tr>
       <tr>
         <td>
-          <%= form.text_field :id, autocomplete: "id", type: "id", placeholder: "Id", class: "filter" %>
+          <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
         </td>
         <td>
-          <%= form.text_field :created_above, autocomplete: "created_above", type: "created_above", placeholder: "Created Above", class: "filter" %>
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "Created Above", class: "filter" %>
         </td>
         <td>
-          <%= form.text_field :created_less, autocomplete: "created_less", type: "created_less", placeholder: "Created Less", class: "filter" %>
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "Created Less", class: "filter" %>
         </td>
         <td>
-          <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "publication_date_above", placeholder: "Publication_date Above", class: "filter" %>
+          <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "date", placeholder: "Publication_date Above", class: "filter" %>
         </td>
         <td>
-          <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "publication_date_less", placeholder: "Publication_date Less", class: "filter" %>
+          <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "date", placeholder: "Publication_date Less", class: "filter" %>
         </td>
       </tr>
       <tr>
         <td>
-          <%= form.text_field :title, autocomplete: "title", type: "title", placeholder: "Title", class: "filter" %>
+          <%= form.text_field :title, autocomplete: "title", type: "text", placeholder: "Title", class: "filter" %>
         </td>
         <td>
           <%= form.text_field :category, autocomplete: "category", type: "category", placeholder: "Category", class: "filter" %>
@@ -38,7 +39,7 @@
         <td style="text-align: center">
           <button class="button-search">
             <i class='bx bx-search' ></i> Search
-          </button>         
+          </button>   
         </td>
       </tr>
     </tbody>

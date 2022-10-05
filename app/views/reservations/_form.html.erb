@@ -32,6 +32,14 @@
   </div>
 
   <div class="submit">
-    <%= form.submit %>
+    <%= link_to books_path do %>
+      <button class="button-return">
+        Return
+      </button>
+    <% end %>
+  
+    <button class="button-submit">
+      Save
+    </button> 
   </div>
 <% end %>

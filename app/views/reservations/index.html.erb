@@ -1,15 +1,18 @@
-<h1>Reservations</h1>
+<h1><%= controller_name.titleize %></h1>
+
+<%= render partial: 'search' %>
 
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
+      <th style="width: 1%"></th>
+      <th style="width: 2%">Id</th>
       <th>Book</th>
       <th>User</th>
       <th>Booking date</th>
       <th>Return date</th>
       <th>Booking status</th>
+      <th>Created_at</th>
       <th colspan="2">
         <%= link_to new_reservation_path do %>
           <i class='bx bx-plus' ></i>
@@ -33,6 +36,7 @@
         <td><%= reservation.booking_date %></td>
         <td><%= reservation.return_date %></td>
         <td><%= reservation.booking_status %></td>
+        <td><%= reservation.created_at.to_s(:short) %></td>
         <td>
           <%= link_to edit_reservation_path(reservation) do %>
             <i class='bx bx-edit'></i>

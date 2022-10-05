@@ -4,10 +4,8 @@ class ReservationsController < ApplicationController
 
   # GET /reservations or /reservations.json
   def index
-    if current_user.role == "librarian"
-      @reservations = ReservationSearch.new(params).results
-    end
-      @reservations = ReservationSearch.new(params).results
+    @search = ReservationSearch.new(search_params)
+    @reservations = @search.results
   end
 
   # GET /reservations/1 or /reservations/1.json
@@ -59,6 +57,12 @@ class ReservationsController < ApplicationController
       format.html { redirect_to reservations_url, notice: "Reservation was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  protected
+
+  def search_params
+    (params.delete(:reservation_search) || {})
   end
 
   private

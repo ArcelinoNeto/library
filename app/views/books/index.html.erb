@@ -5,14 +5,15 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
+      <th style="width: 1%"></th>
+      <th style="width: 2%">Id</th>
       <th>Title</th>
-      <th>Description</th>
+      <th >Description</th>
       <th>Category</th>
       <th>Author</th>
       <th>Publication date</th>
-      <th>Publishing company</th>
+      <th style="width: 15%">Publishing company</th>
+      <th>Created_at</th>
       <th colspan="2">
         <% if current_user.role == "librarian" %>
           <%= link_to new_book_path do %>
@@ -38,6 +39,7 @@
         <td><%= book.author %></td>
         <td><%= book.publication_date %></td>
         <td><%= book.publishing_company %></td>
+        <td><%= book.created_at.to_s(:short) %></td>
         <td>
           <% if current_user.role == "librarian" %>
             <%= link_to edit_book_path(book) do %>
