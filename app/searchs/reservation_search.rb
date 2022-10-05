@@ -4,7 +4,7 @@ class ReservationSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Reservation.all.order(:id)
+    Reservation.all
   end
 
   def search_id

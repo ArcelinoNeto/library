@@ -4,7 +4,7 @@ class UserSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    User.all.order(:id)
+    User.all
   end
 
   def search_id

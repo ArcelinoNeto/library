@@ -4,7 +4,7 @@ class BookSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Book.all.order(:id)
+    Book.all
   end
 
   def search_order_title

@@ -461,6 +461,30 @@ th{
   color: #5e8bb8;
   background: #fff;
   border-radius: 6px;
+  box-shadow: none;
+}
+
+a{
+  box-shadow: none;
+  background: #E4E9F7;
+}
+
+a:hover{
+  box-shadow: none;
+  background: #E4E9F7;
+}
+
+.pagination {
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 15px;
+  color: #5e8bb8;
+}
+
+.pagination:hover{
+  color: #5e8bb8;
+  border-radius: 6px;
+  box-shadow: none;
 }
 
 @media (max-width: 420px) {
@@ -468,7 +492,6 @@ th{
     display: none;
   }
 }
-
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
