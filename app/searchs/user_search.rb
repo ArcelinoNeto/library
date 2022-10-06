@@ -7,6 +7,14 @@ class UserSearch < Searchlight::Search
     User.all
   end
 
+  def search_order_name
+    if order_name == 1
+     query
+    else
+     query.order(name: :asc)
+    end
+  end
+
   def search_id
     query.where(id: options[:id])
   end
@@ -26,5 +34,9 @@ class UserSearch < Searchlight::Search
     entry_date = options[:created_less]
     converted_date = entry_date.to_date
     query.where('created_at <= ?', "%#{converted_date}%")
+  end
+
+  def search_role
+    query.where(role: options[:role])
   end
 end

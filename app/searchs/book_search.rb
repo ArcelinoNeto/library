@@ -8,7 +8,11 @@ class BookSearch < Searchlight::Search
   end
 
   def search_order_title
-    Book.all.order(title: :asc)
+   if order_title == 1
+    query
+   else
+    query.order(title: :asc)
+   end
   end
 
   def search_id

@@ -34,17 +34,24 @@
         <td>
           <%= form.text_field :book_title, autocomplete: "book_title", type: "text", placeholder: "Book Title", class: "filter" %>
         </td>
-        <td colspan="2">
+        <td>
           <%= form.text_field :user_name, autocomplete: "user_name", type: "text", placeholder: "User Name", class: "filter" %>
         </td>
-        <td colspan="3">
-        
+        <td class="filter-title" colspan="5">
+          Booking Status:
+          <%= form.select :booking_status, [[' ', nil], ['Available', 0], ['Borrowed', 1], ['Late', 2]] %>
+        </td>
+      </tr>
+      <tr>
+        <td class="filter-title" colspan="6">
+          Order By:
+          <%= form.select :order_title, [['Id', nil], ['Title', 1]] %>
         </td>
         <td style="text-align: center">
           <button class="button-search">
             <i class='bx bx-search' ></i> Search
           </button>   
-        </td>     
+        </td>
       </tr>
     </tbody>
   </table>

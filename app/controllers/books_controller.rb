@@ -5,7 +5,7 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
-    @search = BookSearch.new(search_params)
+    @search = BookSearch.new(search_params)    
     @books = @search.results.order(:id).page(params[:page]).per(20)
   end
 

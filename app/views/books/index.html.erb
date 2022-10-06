@@ -37,7 +37,7 @@
         <td><%= book.description %></td>
         <td><%= book.category %></td>
         <td><%= book.author %></td>
-        <td><%= book.publication_date %></td>
+        <td><%= book.publication_date.to_date.to_s(:rfc822) %></td>
         <td><%= book.publishing_company %></td>
         <td><%= book.created_at.to_s(:short) %></td>
         <td>

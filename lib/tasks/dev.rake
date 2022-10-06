@@ -23,7 +23,7 @@ namespace :dev do
 
     puts "Cadastrando Usuários!"
 
-    5.times do |i|
+    9.times do |i|
       password = Faker::Internet.password(min_length: 8)
       User.create!(
         name: Faker::Name.name,
@@ -38,7 +38,7 @@ namespace :dev do
 
     puts "Cadastrando Livros!"
 
-    10.times do |i|
+    50.times do |i|
       Book.create!(
         title: Faker::Book.title,
         description: Faker::Marketing.buzzwords,
@@ -53,7 +53,7 @@ namespace :dev do
     
     puts "Cadastrando Reservas!"
 
-    20.times do |i|
+    100.times do |i|
       Reservation.create!(
         booking_date: Faker::Date.forward(days: 0),
         return_date: Faker::Date.forward(days: 5),

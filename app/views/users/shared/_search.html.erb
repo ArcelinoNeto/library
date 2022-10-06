@@ -2,7 +2,9 @@
   <table cellpadding="0" cellspacing="0">
     <tbody>
       <tr>
-        <td class="filter-title">Filters:</td>
+        <td class="filter-title" colspan="2">Filters:</td>
+        <td class="filter-title" colspan="2">Created At:</td>
+      </tr>
       </tr>
       <tr>
         <td>
@@ -16,6 +18,16 @@
         </td>
         <td>
           <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
+        </td>
+        <td class="filter-title">
+          Role:
+          <%= form.select :role, [[' ', nil], ['Librarian', 0], ['Restricted User', 1]] %>
+        </td>
+      </tr>
+      <tr>
+        <td class="filter-title" colspan="4">
+          Order By:
+          <%= form.select :order_name, [['Id', nil], ['Name', 1]] %>
         </td>
         <td style="text-align: center">
           <button class="button-search">

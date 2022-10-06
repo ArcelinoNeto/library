@@ -3,18 +3,12 @@
     <tbody>
       <tr>
         <td class="filter-title">Filters:</td>
-        <td class="filter-title" colspan="2">Created At:</td>
         <td class="filter-title" colspan="2">Publication Date:</td>
+        <td class="filter-title" colspan="2">Created At:</td>
       </tr>
       <tr>
         <td>
           <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
-        </td>
-        <td>
-          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "Created Above", class: "filter" %>
-        </td>
-        <td>
-          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "Created Less", class: "filter" %>
         </td>
         <td>
           <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "date", placeholder: "Publication_date Above", class: "filter" %>
@@ -22,6 +16,12 @@
         <td>
           <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "date", placeholder: "Publication_date Less", class: "filter" %>
         </td>
+        <td>
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "Created Above", class: "filter" %>
+        </td>
+        <td>
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "Created Less", class: "filter" %>
+        </td>        
       </tr>
       <tr>
         <td>
@@ -33,8 +33,14 @@
         <td>
           <%= form.text_field :author, autocomplete: "author", type: "author", placeholder: "Author", class: "filter" %>
         </td>
-        <td>
+        <td colspan="2">
           <%= form.text_field :publishing_company, autocomplete: "publishing_company", type: "publishing_company", placeholder: "Publishing Company", class: "filter" %>
+        </td>
+      </tr>
+      <tr>
+        <td class="filter-title" colspan="4">
+          Order By:
+          <%= form.select :order_title, [['Id', nil], ['Title', 1]] %>
         </td>
         <td style="text-align: center">
           <button class="button-search">

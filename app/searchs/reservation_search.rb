@@ -7,6 +7,14 @@ class ReservationSearch < Searchlight::Search
     Reservation.all
   end
 
+  def search_order_title
+    if order_title == 1
+     query
+    else
+     query.joins(:book).order(title: :asc)
+    end
+  end
+
   def search_id
     query.where(id: options[:id])
   end
@@ -58,7 +66,6 @@ class ReservationSearch < Searchlight::Search
   end
 
   def search_booking_status
-    entry_booking_status = options[:booking_status]
-    query.where('booking_status == ?', "%#{entry_booking_status}%" )
+    query.where(booking_status: options[:booking_status])
   end
 end
