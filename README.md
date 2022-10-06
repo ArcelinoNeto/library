@@ -57,7 +57,7 @@ User.create!(name: 'Admin', email: 'admin@admin.com', role: 'librarian', passwor
 Role Options:
 librarian || restricted_user
 
-1. Start the project
+5. Start the project
 ```
 rails s
 ```
