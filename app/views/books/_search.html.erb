@@ -40,7 +40,7 @@
       <tr>
         <td class="filter-title" colspan="4">
           Order By:
-          <%= form.select :order_title, [['Id', nil], ['Title', 1]] %>
+          <%= form.select :order_by, ['Title', 'Created_at'], include_blank: true %>
         </td>
         <td style="text-align: center">
           <button class="button-search">

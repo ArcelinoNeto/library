@@ -7,12 +7,12 @@ class BookSearch < Searchlight::Search
     Book.all
   end
 
-  def search_order_title
-   if order_title == 1
-    query
-   else
-    query.order(title: :asc)
-   end
+  def search_order_by
+    if order_by == 'Title'
+      query.order(title: :asc)
+    elsif order_by == 'Created_at'
+      query.order(:created_at)
+    end    
   end
 
   def search_id

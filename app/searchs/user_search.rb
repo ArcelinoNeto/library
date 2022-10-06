@@ -7,12 +7,12 @@ class UserSearch < Searchlight::Search
     User.all
   end
 
-  def search_order_name
-    if order_name == 1
-     query
-    else
-     query.order(name: :asc)
-    end
+  def search_order_by
+    if order_by == 'Name'
+      query.order(name: :asc)
+    elsif order_by == 'Created_at'
+      query.order(:created_at)
+    end    
   end
 
   def search_id

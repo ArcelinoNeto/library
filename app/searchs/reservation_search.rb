@@ -7,13 +7,16 @@ class ReservationSearch < Searchlight::Search
     Reservation.all
   end
 
-  def search_order_title
-    if order_title == 1
-     query
-    else
-     query.joins(:book).order(title: :asc)
+  def search_order_by
+    if order_by == 'Book Title'
+      query.joins(:book).order(title: :asc)
+    elsif order_by == 'Created_at'
+      query.order(:created_at)
+    elsif order_by == 'User Name'
+      query.joins(:user).order(name: :asc)
     end
   end
+  
 
   def search_id
     query.where(id: options[:id])
