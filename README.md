@@ -41,8 +41,23 @@ To populate with data for testing run the command below
 ```
 rails dev:setup
 ```
+4. Create admin user with `rails create_user`.
 
-4. Start the project
+Enter rails console
+
+```
+rails c
+```
+
+Run the command
+
+```
+User.create!(name: 'Admin', email: 'admin@admin.com', role: 'librarian', password: '123456', password_confirmation: '123456')
+```
+Role Options:
+librarian || restricted_user
+
+1. Start the project
 ```
 rails s
 ```

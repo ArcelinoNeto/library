@@ -8,19 +8,6 @@ namespace :dev do
     puts "Base zerada com sucesso!"
     puts " "
     
-    puts "Cadastrando Usuário Admin"
-    
-    User.create!(
-      name: "Admin",
-      email: "admin@admin.com",
-      role: 0,
-      password: "123456",
-      password_confirmation: "123456"
-    )
-    
-    puts "Usuário Admin cadastrado com sucesso!"
-    puts " "
-
     puts "Cadastrando Usuários!"
 
     9.times do |i|
