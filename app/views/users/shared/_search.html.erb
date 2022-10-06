@@ -13,11 +13,11 @@
         <td>
           <%= form.text_field :name, autocomplete: "name", type: "text", placeholder: "Name", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
+         <td class="filter-title">
+          Fron: <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
+         <td class="filter-title">
+          Until: <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
         </td>
         <td class="filter-title">
           Role:

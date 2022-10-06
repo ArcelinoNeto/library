@@ -1,6 +1,6 @@
 <%= form_for(@search, url: books_path, method: :get)  do |form| %>
   <table cellpadding="0" cellspacing="0">
-    <tbody>
+    <tbody> 
       <tr>
         <td class="filter-title">Filters:</td>
         <td class="filter-title" colspan="2">Publication Date:</td>
@@ -10,17 +10,17 @@
         <td>
           <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "date", placeholder: "Publication_date Above", class: "filter" %>
+        <td class="filter-title">
+          Fron: <%= form.text_field :publication_date_above, autocomplete: "publication_date_above", type: "date", placeholder: "Publication_date Above", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "date", placeholder: "Publication_date Less", class: "filter" %>
+        <td class="filter-title">
+          Until: <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "date", placeholder: "Publication_date Less", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "Created Above", class: "filter" %>
+        <td class="filter-title">
+          Fron: <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "Created Above", class: "filter" %>
         </td>
-        <td>
-          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "Created Less", class: "filter" %>
+        <td class="filter-title">
+          Until: <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "Created Less", class: "filter" %>
         </td>        
       </tr>
       <tr>

@@ -35,37 +35,37 @@ class ReservationSearch < Searchlight::Search
   def search_booking_date_above
     entry_date = options[:booking_date_above]
     converted_date = entry_date.to_date
-    query.where('booking_date >= ?', "%#{converted_date}%")
+    query.where('booking_date >= ?', "#{converted_date}")
   end
 
   def search_booking_date_less
     entry_date = options[:booking_date_less]
     converted_date = entry_date.to_date
-    query.where('booking_date <= ?', "%#{converted_date}%")
+    query.where('booking_date <= ?', "#{converted_date}")
   end
 
   def search_return_date_above
     entry_date = options[:return_date_above]
     converted_date = entry_date.to_date
-    query.where('return_date >= ?', "%#{converted_date}%")
+    query.where('return_date >= ?', "#{converted_date}")
   end
 
   def search_return_date_less
     entry_date = options[:return_date_less]
     converted_date = entry_date.to_date
-    query.where('return_date <= ?', "%#{converted_date}%")
+    query.where('return_date <= ?', "#{converted_date}")
   end
   
   def search_created_above
     entry_date = options[:created_above]
     converted_date = entry_date.to_date
-    query.where('created_at >= ?', "%#{converted_date}%")
+    query.where('created_at >= ?', "#{converted_date}")
   end
 
   def search_created_less
     entry_date = options[:created_less]
     converted_date = entry_date.to_date
-    query.where('created_at <= ?', "%#{converted_date}%")
+    query.where('created_at <= ?', "#{converted_date}")
   end
 
   def search_booking_status
