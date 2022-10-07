@@ -1,6 +1,6 @@
 # About
-This project is the result of a challenge proposed by the company Levante.
-The project proposal is the creation of an application for the management of a "Library".
+This project is the result of the challenge proposed by the Levante company.
+The project proposal is a library management system.
 
 # Project
 The project was built following the rules defined by the staff of [Levante](https://gist.github.com/caioagiani/66b26f85ab6db506fecb9a90a04389f7).
@@ -12,10 +12,19 @@ Click [here](https://www.loom.com/share/9329ecca9c4048ba8ee99243433a66a0)
 This is application using 
 - ruby on rails ``6.1.6.1``
 - ruby ``2.7.1``
+- html
+- css
+- javascript
 - postgresql
 
 # Database diagram
 ![library](https://github.com/ArcelinoNeto/library/blob/master/library.png)
+
+# Additional definitions:
+- Authentication with gem devise
+- Authorization with the cancancan gem
+- Filters (search and sort) with the Searchlight gem
+- Pagination with the Kaminari gem
 
 ## Set up
 

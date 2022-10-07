@@ -6,8 +6,17 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 gem 'rails-i18n'
+
+# Authentication 
 gem 'devise'
 gem 'devise-i18n'
+# Authorization
+gem 'cancancan'
+# Filters (search and sort)
+gem 'searchlight'
+# Pagination 
+gem 'kaminari'
+
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -25,7 +34,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# search
 gem 'searchlight'
+
 gem 'kaminari'
 gem 'cancancan'
 

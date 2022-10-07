@@ -4,46 +4,63 @@
       <tr>
         <td class="filter-title" colspan="6">Filters:</td>
       </tr>
-      <tr>
-        <td class="filter-title" colspan="2">Booking Date:</td>
-        <td class="filter-title" colspan="2">Return Date:</td>
-        <td class="filter-title" colspan="2">Created At:</td>
-      </tr>
-      <tr>
-        <td class="filter-title">
-          Fron: <%= form.text_field :booking_date_above, autocomplete: "booking_date_above", type: "date", placeholder: "booking_date_above", class: "filter" %>
-        </td>
-        <td class="filter-title">
-          Until: <%= form.text_field :booking_date_less, autocomplete: "booking_date_less", type: "date", placeholder: "booking_date_less", class: "filter" %>
-        </td>
-        <td class="filter-title">
-          Fron: <%= form.text_field :return_date_above, autocomplete: "return_date_above", type: "date", placeholder: "return_date_above", class: "filter" %>
-        </td>
-        <td class="filter-title">
-          Until: <%= form.text_field :return_date_less, autocomplete: "return_date_less", type: "date", placeholder: "return_date_less", class: "filter" %>
-        </td>
-        <td class="filter-title">
-          Fron: <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
-        </td>
-        <td class="filter-title">
-          Until: <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
-        </td>
-      </tr>
-      <tr>
+       <tr>
         <td>
           <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
         </td>
         <td>
           <%= form.text_field :book_title, autocomplete: "book_title", type: "text", placeholder: "Book Title", class: "filter" %>
         </td>
-        <td>
+        <td colspan="2">
           <%= form.text_field :user_name, autocomplete: "user_name", type: "text", placeholder: "User Name", class: "filter" %>
         </td>
-        <td class="filter-title" colspan="3">
+        <td class="filter-title" colspan="2">
           Booking Status:
           <%= form.select :booking_status, [[' ', nil], ['Available', 0], ['Borrowed', 1], ['Late', 2]] %>
         </td>
       </tr>
+      <tr>
+        <td class="filter-title">
+          Booking Date:
+          <br>
+          Fron:
+          <%= form.text_field :booking_date_above, autocomplete: "booking_date_above", type: "date", placeholder: "booking_date_above", class: "filter" %>
+        </td>
+        <td class="filter-title">
+          <br>
+          Until: <%= form.text_field :booking_date_less, autocomplete: "booking_date_less", type: "date", placeholder: "booking_date_less", class: "filter" %>
+        </td>
+
+        <td class="filter-title">
+          Return Date:
+          <br>
+          Fron:
+          <%= form.text_field :return_date_above, autocomplete: "return_date_above", type: "date", placeholder: "return_date_above", class: "filter" %>
+        </td>
+        <td class="filter-title">
+          <br>
+          Until:
+          <%= form.text_field :return_date_less, autocomplete: "return_date_less", type: "date", placeholder: "return_date_less", class: "filter" %>
+        </td>
+        <td class="filter-title">
+          Created At:
+          <br>
+          Fron:
+          <%= form.text_field :created_above, autocomplete: "created_above", type: "date", placeholder: "created_above", class: "filter" %>
+        </td>
+        <td class="filter-title">
+          <br>
+          Until:
+          <%= form.text_field :created_less, autocomplete: "created_less", type: "date", placeholder: "created_less", class: "filter" %>
+        </td>
+
+      </tr>
+      <tr>
+        
+        
+        
+      </tr>
+     
       <tr>
         <td class="filter-title" colspan="5">
           Order By:

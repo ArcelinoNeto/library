@@ -9,9 +9,9 @@
       <th style="width: 2%">Id</th>
       <th>Book</th>
       <th>User</th>
+      <th>Booking status</th>
       <th>Booking date</th>
       <th>Return date</th>
-      <th>Booking status</th>
       <th>Created_at</th>
       <th colspan="2">
         <%= link_to new_reservation_path do %>
@@ -33,9 +33,9 @@
         <td><%= reservation.id %></td>
         <td><%= reservation.book.title %></td>
         <td><%= reservation.user.name %></td>
+        <td><%= reservation.booking_status %></td>
         <td><%= reservation.booking_date.to_date.to_s(:rfc822) %></td>
         <td><%= reservation.return_date.to_date.to_s(:rfc822) %></td>
-        <td><%= reservation.booking_status %></td>
         <td><%= reservation.created_at.to_s(:short) %></td>
         <td>
           <%= link_to edit_reservation_path(reservation) do %>

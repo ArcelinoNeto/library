@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @search = UserSearch.new(search_params)
-    @users = @search.results.order(:id).page(params[:page]).per(20)
+    @users = @search.results.order(:id).page(params[:page]).per(10)
   end
 
  def new

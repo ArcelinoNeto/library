@@ -11,8 +11,8 @@
       <th >Description</th>
       <th>Category</th>
       <th>Author</th>
-      <th>Publication date</th>
       <th style="width: 15%">Publishing company</th>
+      <th>Publication date</th>      
       <th>Created_at</th>
       <th colspan="2">
         <% if current_user.role == "librarian" %>
@@ -37,8 +37,8 @@
         <td><%= book.description %></td>
         <td><%= book.category %></td>
         <td><%= book.author %></td>
-        <td><%= book.publication_date.to_date.to_s(:rfc822) %></td>
         <td><%= book.publishing_company %></td>
+        <td><%= book.publication_date.to_date.to_s(:rfc822) %></td>
         <td><%= book.created_at.to_s(:short) %></td>
         <td>
           <% if current_user.role == "librarian" %>

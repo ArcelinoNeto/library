@@ -30,16 +30,6 @@
             <span class="tooltip">Index</span>
           </li>
 
-          <% if current_user.role == "librarian" %>
-              <li>
-                <%= link_to users_path do %>
-                  <i class='bx bx-user' ></i>
-                  <span class="links_name">User</span>
-                <% end %>
-                <span class="tooltip">User</span>
-            </li>
-          <% end %>
-
           <li>
             <%= link_to books_path  do %>
               <i class='bx bx-book'></i>
@@ -55,8 +45,18 @@
             <% end %>
             <span class="tooltip">Reservations</span>
           </li>
-        <% end %>
 
+          <% if current_user.role == "librarian" %>
+              <li>
+                <%= link_to users_path do %>
+                  <i class='bx bx-user' ></i>
+                  <span class="links_name">User</span>
+                <% end %>
+                <span class="tooltip">User</span>
+            </li>
+          <% end %>
+        <% end %>
+        
         <li class="user">
           <% if current_user %>
             <div class="user-details">
