@@ -20,7 +20,7 @@ This is application using
 # Database diagram
 ![library](https://github.com/ArcelinoNeto/library/blob/master/library.png)
 
-# Additional definitions:
+# Additional definitions
 - Authentication with gem devise
 - Authorization with the cancancan gem
 - Filters (search and sort) with the Searchlight gem
