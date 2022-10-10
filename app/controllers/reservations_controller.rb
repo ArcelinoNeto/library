@@ -6,7 +6,7 @@ class ReservationsController < ApplicationController
   # GET /reservations or /reservations.json
   def index
     @search = ReservationSearch.new(search_params)
-    @reservations = @search.results.order(:id).page(params[:page]).per(10)
+    @reservations = @search.results.order(:id).page(params[:page])
   end
 
   # GET /reservations/1 or /reservations/1.json

@@ -17,7 +17,6 @@ gem 'searchlight'
 # Pagination 
 gem 'kaminari'
 
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server

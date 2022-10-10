@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   enum role: [:librarian, :restricted_user]
+  paginates_per 20
 
   validates_presence_of :name, on: :create
   validates_uniqueness_of :name

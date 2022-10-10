@@ -1,5 +1,6 @@
 class Reservation < ApplicationRecord
   enum booking_status: [:available, :borrowed, :late]
+  paginates_per 20
   belongs_to :book
   belongs_to :user
 
