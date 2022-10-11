@@ -33,11 +33,11 @@
           <% end %>
         </td>
         <td><%= book.id %></td>
-        <td><%= book.title %></td>
-        <td><%= book.description %></td>
-        <td><%= book.category %></td>
-        <td><%= book.author %></td>
-        <td><%= book.publishing_company %></td>
+        <td><%= book.title.titleize %></td>
+        <td><%= book.description.capitalize %></td>
+        <td><%= book.category.capitalize %></td>
+        <td><%= book.author.titleize %></td>
+        <td><%= book.publishing_company.titleize %></td>
         <td><%= book.publication_date.to_date.to_s(:rfc822) %></td>
         <td><%= book.created_at.to_s(:short) %></td>
         <td>

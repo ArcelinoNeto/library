@@ -20,24 +20,32 @@
   </div>
 
   <div class="field">
-    <%= form.text_field :booking_date, autocomplete: "booking_date", type: "date", placeholder: "Booking Date", class: "input"  %>
-  </div>
+    <span class="filter-title">
+      Booking Date:
+      <%= form.date_field :booking_date, autocomplete: "booking_date", placeholder: "Booking Date", class: "input"  %>
+    </span>
+  </div>  
+  <br>
 
   <div class="field">
-    <%= form.text_field :return_date, autocomplete: "return_date", type: "date", placeholder: "Return Date", class: "input"  %>
-  </div>
+     <span class="filter-title">
+        Return Date:
+        <%= form.date_field :return_date, autocomplete: "return_date", type: "date", placeholder: "Return Date", class: "input"  %>
+      </span>
+  </div>  
+  <br>
 
   <div class="field select">
     <%= form.select :booking_status, options_for_select(Reservation.booking_statuses.map {|key, value| [key.titleize, Reservation.booking_statuses.key(value)]}, Reservation.booking_statuses), {prompt: "Select Status"} %>
   </div>
 
-  <div class="submit">
+  <div>
     <%= link_to reservations_path do %>
       <button class="button-return">
         Return
       </button>
     <% end %>
-  
+      
     <button class="button-submit">
       Save
     </button> 

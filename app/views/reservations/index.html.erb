@@ -31,9 +31,9 @@
           <% end %>
         </td>
         <td><%= reservation.id %></td>
-        <td><%= reservation.book.title %></td>
-        <td><%= reservation.user.name %></td>
-        <td><%= reservation.booking_status %></td>
+        <td><%= reservation.book.title.titleize %></td>
+        <td><%= reservation.user.name.titleize %></td>
+        <td><%= reservation.booking_status.titleize %></td>
         <td><%= reservation.booking_date.to_date.to_s(:rfc822) %></td>
         <td><%= reservation.return_date.to_date.to_s(:rfc822) %></td>
         <td><%= reservation.created_at.to_s(:short) %></td>
