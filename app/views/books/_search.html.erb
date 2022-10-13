@@ -1,23 +1,23 @@
 <%= form_for(@search, url: books_path, method: :get)  do |form| %>
-  <table cellpadding="0" cellspacing="0">
+  <table class="filter-table" cellpadding="0" cellspacing="0">
     <tbody>
       <tr>
         <td class="filter-title" colspan="5">Filters:</td>
       </tr>
       <tr>
-        <td>
+        <td class="filter-title">
           <%= form.text_field :id, autocomplete: "id", type: "number", placeholder: "Id", class: "filter" %>
         </td>
-        <td>
+        <td class="filter-title">
           <%= form.text_field :title, autocomplete: "title", type: "text", placeholder: "Title", class: "filter" %>
         </td>
-        <td>
+        <td class="filter-title">
           <%= form.text_field :category, autocomplete: "category", type: "category", placeholder: "Category", class: "filter" %>
         </td>
-        <td>
+        <td class="filter-title">
           <%= form.text_field :author, autocomplete: "author", type: "author", placeholder: "Author", class: "filter" %>
         </td>
-        <td colspan="2">
+        <td class="filter-title" colspan="2">
           <%= form.text_field :publishing_company, autocomplete: "publishing_company", type: "publishing_company", placeholder: "Publishing Company", class: "filter" %>
         </td>        
       </tr>
@@ -33,7 +33,7 @@
           Until:
           <%= form.text_field :publication_date_less, autocomplete: "publication_date_less", type: "date", placeholder: "Publication_date Less", class: "filter" %>
         </td>
-        <td></td>
+        <td class="filter-title"></td>
         <td class="filter-title">
           Created At:
           <br>
@@ -51,7 +51,7 @@
           Order By:
           <%= form.select :order_by, ['Title', 'Created_at'], include_blank: true%>
         </td>
-        <td style="text-align: center">
+        <td class="filter-title" style="text-align: center">
           <button class="button-search">
             <i class='bx bx-search' ></i> Search
           </button>   
