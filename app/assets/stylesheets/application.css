@@ -38,7 +38,6 @@ p{
 
 table{
   width: 100%;
-  border-bottom: solid 1px #5e8bb8;
 }
 
 th{
@@ -329,6 +328,7 @@ th{
   color: #fff;
   background: #008000;
   margin-left: 10px;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -346,6 +346,7 @@ th{
   border-radius: 6px;
   color: #808080	;
   background: #E4E9F7;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -363,6 +364,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #010497;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -380,6 +382,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #FF0000;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -405,6 +408,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #5e8bb8;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -424,6 +428,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #008000;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -453,6 +458,7 @@ th{
   border-radius: 6px;
   color: #5e8bb8;  
   background: #fff;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -474,6 +480,7 @@ th{
   border-radius: 6px;
   color: #fff;
   background: #5e8bb8;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -498,19 +505,83 @@ a{
 a:hover{
   box-shadow: none;
   background: #E4E9F7;
+  color: #11101d;
 }
 
 .pagination {
   text-decoration: none;
-  box-shadow: none;
   font-size: 15px;
   color: #5e8bb8;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease;
 }
 
 .pagination:hover{
   color: #5e8bb8;
   border-radius: 6px;
   box-shadow: none;
+}
+
+.page{
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.page:hover{
+  background: #E4E9F7;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
+}
+
+.first{
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.first:hover{
+  background: #E4E9F7;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
+}
+
+.prev{
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.prev:hover{
+  background: #E4E9F7;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
+}
+
+.next{
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.next:hover{
+  background: #E4E9F7;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
+}
+
+.last{
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.last:hover{
+  background: #E4E9F7;
+  border: solid 1px #5e8bb8;
+  border-radius: 10px;
 }
 
 @media (max-width: 420px) {
