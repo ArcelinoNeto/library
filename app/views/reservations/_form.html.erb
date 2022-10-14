@@ -22,7 +22,7 @@
   <div class="field">
     <span class="filter-title">
       Booking Date:
-      <%= form.date_field :booking_date, autocomplete: "booking_date", placeholder: "Booking Date", class: "input"  %>
+      <%= form.text_field :booking_date, autocomplete: "booking_date", type: "date", placeholder: "Booking Date", class: "input" %>
     </span>
   </div>  
   <br>
@@ -30,7 +30,7 @@
   <div class="field">
      <span class="filter-title">
         Return Date:
-        <%= form.date_field :return_date, autocomplete: "return_date", type: "date", placeholder: "Return Date", class: "input"  %>
+        <%= form.text_field :return_date, autocomplete: "return_date", type: "date", placeholder: "Return Date", class: "input" %>
       </span>
   </div>  
   <br>
