@@ -508,14 +508,20 @@ a:hover{
   color: #11101d;
 }
 
-.pagination {
+.pagination {  
+  position: relative;
+  left: calc(100% - 65%);
+  bottom: 0;
   text-decoration: none;
   font-size: 15px;
-  color: #5e8bb8;
+  background: #5e8bb8;
   border: solid 1px #5e8bb8;
+  border: none;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease;
+  text-align: center;
+  width: 25%;
 }
 
 .pagination:hover{
@@ -528,10 +534,12 @@ a:hover{
   padding: 3px;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: #E4E9F7;  
+  border-radius: 10px;
 }
 
 .page:hover{
-  background: #E4E9F7;
+  background: #f1f1f1;
   border: solid 1px #5e8bb8;
   border-radius: 10px;
 }
@@ -540,10 +548,12 @@ a:hover{
   padding: 3px;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: #E4E9F7;  
+  border-radius: 10px;
 }
 
 .first:hover{
-  background: #E4E9F7;
+  background: #f1f1f1;
   border: solid 1px #5e8bb8;
   border-radius: 10px;
 }
