@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
+# It's a controller that loads and authorizes a resource, authenticates a user, sets a reservation,
+# and has actions for index, show, new, edit, create, update, and destroy
 class ReservationsController < ApplicationController
   load_and_authorize_resource
   before_action :authenticate_user!
-  before_action :set_reservation, only: %i[ show edit update destroy ]
+  before_action :set_reservation, only: %i[show edit update destroy]
 
   # GET /reservations or /reservations.json
   def index
@@ -10,8 +14,7 @@ class ReservationsController < ApplicationController
   end
 
   # GET /reservations/1 or /reservations/1.json
-  def show
-  end
+  def show; end
 
   # GET /reservations/new
   def new
@@ -19,8 +22,7 @@ class ReservationsController < ApplicationController
   end
 
   # GET /reservations/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /reservations or /reservations.json
   def create
@@ -28,7 +30,7 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to reservations_path, notice: "Reservation was successfully created." }
+        format.html { redirect_to reservations_path, notice: 'Reservation was successfully created.' }
         format.json { render :show, status: :created, location: @reservation }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -41,7 +43,7 @@ class ReservationsController < ApplicationController
   def update
     respond_to do |format|
       if @reservation.update(reservation_params)
-        format.html { redirect_to reservations_path, notice: "Reservation was successfully updated." }
+        format.html { redirect_to reservations_path, notice: 'Reservation was successfully updated.' }
         format.json { render :show, status: :ok, location: @reservation }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,7 +57,7 @@ class ReservationsController < ApplicationController
     @reservation.destroy
 
     respond_to do |format|
-      format.html { redirect_to reservations_url, notice: "Reservation was successfully destroyed." }
+      format.html { redirect_to reservations_url, notice: 'Reservation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -67,13 +69,14 @@ class ReservationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_reservation
-      @reservation = Reservation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def reservation_params
-      params.require(:reservation).permit(:booking_date, :return_date, :booking_status, :book_id, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_reservation
+    @reservation = Reservation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def reservation_params
+    params.require(:reservation).permit(:booking_date, :return_date, :booking_status, :book_id, :user_id)
+  end
 end

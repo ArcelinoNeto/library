@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resources :reservations
   resources :books
-  resources :users, except: [:show, :destroy]
+  resources :users, except: %i[show destroy]
 
-  devise_for :admins, :skip => [:registrations]
-  devise_for :users, :skip => [:registrations]
+  devise_for :admins, skip: [:registrations]
+  devise_for :users, skip: [:registrations]
 
   # get 'users/index'
   get 'home/index'

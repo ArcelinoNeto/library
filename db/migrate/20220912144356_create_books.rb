@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+# This class inherits from ActiveRecord::Migration and has a change method that creates a table called
+# books with the following columns: title, description, author, category, publication_date, and
+# publishing_company
 class CreateBooks < ActiveRecord::Migration[6.1]
   def change
     create_table :books do |t|

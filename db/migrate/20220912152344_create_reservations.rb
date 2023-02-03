@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# This class creates a table called reservations with the columns booking_date, return_date,
+# booking_status, book_id, and user_id
 class CreateReservations < ActiveRecord::Migration[6.1]
   def change
     create_table :reservations do |t|

@@ -1,28 +1,30 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "books/index", type: :view do
+RSpec.describe 'books/index', type: :view do
   before(:each) do
     assign(:books, [
-      Book.create!(
-        title: "Title",
-        description: "Description",
-        category: "Category",
-        author: "Author",
-        publication_date: "Puclication Date",
-        publishing_company: "Publishing Company"
-      ),
-      Book.create!(
-        title: "Title",
-        description: "Description",
-        category: "Category",
-        author: "Author",
-        publication_date: "Puclication Date",
-        publishing_company: "Publishing Company"
-      )
-    ])
+             Book.create!(
+               title: 'Title',
+               description: 'Description',
+               category: 'Category',
+               author: 'Author',
+               publication_date: 'Puclication Date',
+               publishing_company: 'Publishing Company'
+             ),
+             Book.create!(
+               title: 'Title',
+               description: 'Description',
+               category: 'Category',
+               author: 'Author',
+               publication_date: 'Puclication Date',
+               publishing_company: 'Publishing Company'
+             )
+           ])
   end
 
-  it "renders a list of books" do
+  it 'renders a list of books' do
     # render
     # assert_select "tr>td", text: "Title".to_s, count: 2
     # assert_select "tr>td", text: "Description".to_s, count: 2

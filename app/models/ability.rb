@@ -1,18 +1,20 @@
 # frozen_string_literal: true
 
+# A librarian can do anything, but a restricted user can only create, update, and read reservations
+# and read books.
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-      user ||= User.new # guest user (not logged in)
-      if user.librarian?
-        can :manage, :all
-      elsif user.restricted_user?
-        can [:index, :show, :new, :edit, :update, :create], Reservation
-        can :read, Book
-      end
+    user ||= User.new # guest user (not logged in)
+    if user.librarian?
+      can :manage, :all
+    elsif user.restricted_user?
+      can %i[index show new edit update create], Reservation
+      can :read, Book
+    end
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# This class represents a user of the library system
 class User < ApplicationRecord
-  enum role: [:librarian, :restricted_user]
+  enum role: %i[librarian restricted_user]
   paginates_per 20
 
   validates_presence_of :name, on: :create
